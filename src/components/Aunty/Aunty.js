@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { RingContext } from '../../App';
 
-const Aunty = (props) => {
-    const {house} = props;
+const Aunty = () => {
+    const [ornaments, house] = useContext(RingContext);
     return (
         <div>
             <h2>Aunty</h2>
-            <small>house: {house}</small>
+            <small>house: {house}</small><br />
+            <small>{ornaments}</small>
         </div>
     );
 };
